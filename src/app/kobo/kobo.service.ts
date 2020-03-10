@@ -1,5 +1,4 @@
 import {KoboFormResponse} from './kobo-form-response';
-import {BigqueryService} from '../bigquery/bigquery.service';
 import rp = require('request-promise');
 
 export class KoboService {
