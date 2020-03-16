@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "deploy": "gcloud functions deploy koboToBigQuery --runtime nodejs10 --trigger-http --allow-unauthenticated --region=europe-west1 --project=training-space",
-    "dev": "export GCLOUD_PROJECT=dasher-253813 && tsc && concurrently \"tsc -w\" \"nodemon dist/bin/dev.js\""
+    "dev": "export GCLOUD_PROJECT=training-space && tsc && concurrently \"tsc -w\" \"nodemon dist/bin/dev.js\"",
+    "package": "yarn tsc && zip -r ret_kobo_bigquery.zip dist package.json yarn.lock"
   },
   "devDependencies": {
     "@types/express": "^4.17.3",

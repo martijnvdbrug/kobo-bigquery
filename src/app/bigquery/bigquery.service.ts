@@ -10,14 +10,14 @@ export class BigqueryService {
 
         // Remove invalid types like Objects an inner Arrays
         rows.forEach(row => {
-            Object.entries(row).forEach(([key, value]) => {
+            Object.entries(row).sort().forEach(([key, value]) => {
                 if (typeof value !== 'string' && typeof value !== 'number' && typeof value !== 'boolean') {
                     delete row[key];
                 } else {
                     delete row[key];
                     row[key.replace(/\W/g, '')] = value;
                 }
-            })
+            });
         });
         // Remove invalid non-alphanumeric characters in field names
         let formattedJson = '';
