@@ -12,7 +12,7 @@
     "@types/express": "^4.17.3",
     "@types/request-promise": "^4.1.45",
     "concurrently": "^5.1.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "nodemon": "^2.0.2",
     "typescript": "^3.8.3"
   },
